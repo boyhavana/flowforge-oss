@@ -3,7 +3,7 @@
 Automate Everything. Own Everything.
 
 ## Instalación rápida
-git clone https://github.com/flowforge-oss/flowforge-oss.git
+git clone https://github.com/boyhavana/flowforge-oss.git
 cd flowforge-oss
 docker compose up -d --build
 
