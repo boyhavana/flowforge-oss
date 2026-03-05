@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FlowForge OSS · Viral Clip Extractor</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="hero">
+        <p class="eyebrow">FlowForge OSS</p>
+        <h1>Extrae clips virales en minutos</h1>
+        <p class="subtitle">
+          Sube tu video, ajusta la duración y genera cortes listos para redes sociales.
+        </p>
+      </header>
+
+      <section class="panel">
+        <form id="clip-form">
+          <label class="field">
+            <span>Archivo de video</span>
+            <input type="file" name="video" accept="video/*" required />
+          </label>
+
+          <div class="grid">
+            <label class="field">
+              <span>Número de clips (máx. 6)</span>
+              <input type="number" name="clipCount" value="3" min="1" max="6" />
+            </label>
+            <label class="field">
+              <span>Duración por clip (segundos)</span>
+              <input type="number" name="clipLength" value="15" min="5" max="60" />
+            </label>
+          </div>
+
+          <button type="submit" class="primary">Generar clips</button>
+        </form>
+
+        <div id="status" class="status" aria-live="polite"></div>
+      </section>
+
+      <section class="results" id="results">
+        <h2>Resultados</h2>
+        <div class="clips" id="clips"></div>
+      </section>
+
+      <section class="info">
+        <h3>¿Cómo funciona?</h3>
+        <ol>
+          <li>Sube un video con las escenas que quieras destacar.</li>
+          <li>Selecciona cuántos clips y la duración objetivo.</li>
+          <li>Descarga los cortes generados automáticamente.</li>
+        </ol>
+        <p class="note">
+          Esta demo usa <strong>ffmpeg/ffprobe</strong> localmente para recortar los videos.
+          Instálalos si quieres procesar archivos reales.
+        </p>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
